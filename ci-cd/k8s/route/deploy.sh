@@ -50,7 +50,7 @@ fi
 helm template ./helm \
     -f ${HELM_ENV_CONFIG} \
     --set inf=${inf} \
-    | oc apply -f - --dry-run=client -o json
+    | oc apply -f -
 
 set +x
 set +e
