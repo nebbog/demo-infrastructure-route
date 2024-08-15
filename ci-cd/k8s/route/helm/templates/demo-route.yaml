@@ -8,7 +8,7 @@ metadata:
 spec:
   path: "{{ .path }}"
   to:
-    kind: Sercice
+    kind: Service
     name: {{ .serviceName }}
 
 {{- end }}
