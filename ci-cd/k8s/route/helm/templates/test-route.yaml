@@ -1,0 +1,14 @@
+{{- range .Values.okd.routes }}
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: {{ regexReplaceAll "\\W+" .route "-" }}
+  namespace: {{ $.Values.okd.namespace }}
+spec:
+  path: "{{ .path }}"
+  to:
+    kind: Sercice
+    name: {{ .serviceName }}
+
+{{- end }}
