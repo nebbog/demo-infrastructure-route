@@ -2,5 +2,5 @@ okd:
   namespace: nebbog-dev
   routes:
     - route: demo-app
-      path: "demo-app"
+      path: "/demo-app"
       serviceName: demo-app
